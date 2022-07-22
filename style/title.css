@@ -1,0 +1,39 @@
+#title-container{
+    display: flex;
+    font-size: 50px;
+    font-weight: 1000;
+    font-family: var(--font-family);
+    letter-spacing: 15px;
+    justify-content: center;
+    user-select: none;
+    position: absolute;
+    top: 30px;
+    color: hsl(var(--hue),var(--sat),calc(var(--lightness) + 5%),var(--alpha));
+}
+#title-container div{
+    animation-timing-function: linear;
+    animation-duration: 4200ms;
+    animation-name: title-animation;
+    animation-delay: var(--delay);
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    animation-direction: normal;
+}
+@keyframes title-animation {
+    0%{
+        color: hsl(var(--hue),var(--sat),calc(var(--lightness) + 15%),var(--alpha));
+        text-shadow: 0px 0px 10px transparent;
+    }
+    25%{
+        color: hsl(var(--hue),var(--sat),calc(var(--lightness) + 50%),var(--alpha));
+        text-shadow: 0px 0px 10px transparent;
+    }
+    50%{
+        color: hsl(var(--hue),var(--sat),calc(var(--lightness) + 15%),var(--alpha));
+        text-shadow: 0px 0px 10px transparent;
+    }
+    100%{
+        color: hsl(var(--hue),var(--sat),calc(var(--lightness) + 15%),var(--alpha));
+        text-shadow: 0px 0px 10px transparent;
+    }
+}
